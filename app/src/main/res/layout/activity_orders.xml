@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".OrdersActivity">
+
+    <Button
+            android:id="@+id/sonyaButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Создать новый заказ"
+            android:layout_marginTop="4dp"
+            android:layout_marginLeft="8dp"/>
+    <TextView
+            android:id="@+id/orderTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Заказов нет"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sonyaButton"/>
+
+    <com.google.android.gms.common.SignInButton
+            android:id="@+id/signInButton"
+            app:layout_constraintTop_toBottomOf="@id/orderTitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+</android.support.constraint.ConstraintLayout>

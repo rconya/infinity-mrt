@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<android.support.v4.widget.NestedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NewOrderActivity">
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <RadioGroup
+                android:id="@+id/sexGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                    android:checked="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Мужской" />
+
+            <RadioButton
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Женский" />
+
+        </RadioGroup>
+
+        <android.support.design.widget.TextInputLayout
+                android:id="@+id/ageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sexGroup">
+
+            <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Возраст" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <CheckBox
+                android:id="@+id/urgentView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Срочность"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/ageLayout" />
+
+        <TextView
+                android:id="@+id/categoryTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Категория"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/urgentView" />
+
+        <Spinner
+                android:id="@+id/categoryView"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/categoryTitle" />
+
+        <TextView
+                android:id="@+id/bodyTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Область"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/categoryView" />
+
+        <Spinner
+                android:id="@+id/bodyView"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/bodyTitle" />
+
+        <android.support.design.widget.TextInputLayout
+                android:id="@+id/historyLayout"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                app:errorEnabled="true"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bodyView">
+
+            <android.support.design.widget.TextInputEditText
+                    android:id="@+id/historyTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="top"
+                    android:hint="История" />
+
+
+        </android.support.design.widget.TextInputLayout>
+        <Button
+                android:id="@+id/payButton"
+                app:layout_constraintBottom_toBottomOf="@+id/historyLayout"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Оплатить"/>
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
