@@ -14,7 +14,7 @@ class NewOrderActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_order)
 
-        supportActionBar?.title = "Оформление заказа"
+        supportActionBar?.title = "Оформbnm заказ"
 
         val categories = listOf("КТ", "МРТ", "Рентген")
         categoryView.adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, categories)
